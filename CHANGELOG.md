@@ -1,5 +1,11 @@
 # primaris
 
+## 1.0.6
+
+### Patch Changes
+
+- 9c161d1: test update
+
 ## 1.0.5
 
 ### Patch Changes
