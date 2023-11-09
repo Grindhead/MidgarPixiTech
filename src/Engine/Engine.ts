@@ -108,7 +108,7 @@ export class Engine {
     });
 
     if (scene) {
-      this.setupScene(scene);
+      this.setupScene(scene, this.currentScene?.name);
       this.currentScene = scene;
     } else {
       console.error('SCENE NOT FOUND: ' + sceneName);
@@ -118,9 +118,10 @@ export class Engine {
   /**
    * Adds a scene to the APP.STAGE, removing all previous children.
    * @param sceneSettings - the {@link SceneSettings} the scene needs to use
+   * @param lastSceneName - the name of the previous scene
    * @returns void
    */
-  setupScene(sceneSettings: SceneSettings): void {
+  setupScene(sceneSettings: SceneSettings, lastSceneName?: string): void {
     this.app.stage.removeChildren();
 
     // close the current scene if we have one
@@ -135,8 +136,8 @@ export class Engine {
 
     sceneSettings.fadeInTransition.init(TransitionType.FADE_IN, sceneContainer);
 
-    gameScene.init(this.app, this.sceneSwitcher);
-    gameScene.setup();
+    gameScene.init(this.app, this.sceneSwitcher, sceneContainer);
+    gameScene.setup(lastSceneName);
 
     sceneSettings.fadeOutTransition.init(
       TransitionType.FADE_OUT,

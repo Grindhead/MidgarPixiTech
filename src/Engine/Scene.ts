@@ -51,14 +51,17 @@ export abstract class AbstractGameScene implements GameScene {
    * Basic initialization of a scene, passing in the {@link Application} and {@link sceneSwitcher}
    * @param app - the {@link Application} for the project
    * @param sceneSwitcher - controls switching between scenes
+   * @param sceneContainer - the {@link Container} the scene uses
    * @returns void
    */
   init = (
     app: Application,
-    sceneSwitcher: (sceneName: string) => void
+    sceneSwitcher: (sceneName: string) => void,
+    sceneContainer: Container
   ): void => {
     this.app = app;
     this.sceneSwitcher = sceneSwitcher;
+    this.sceneContainer = sceneContainer;
   };
 
   /**
@@ -68,20 +71,17 @@ export abstract class AbstractGameScene implements GameScene {
 
   /**
    * Setup the scene for usage.
-   * @param sceneContainer - the {@link Container} the scene uses
    * @param previousScreen - the name of the screen the back button should return to
    * @returns void
    */
-  public setup = (
-    sceneContainer?: Container,
-    previousScreen?: string
-  ): void => {
-    if (!previousScreen || !sceneContainer) {
+  public setup = (previousScreen?: string): void => {
+    if (!previousScreen || !this.sceneContainer) {
       return;
     }
+
     this.backButton = createBackButton(
       this.sceneSwitcher,
-      sceneContainer,
+      this.sceneContainer,
       previousScreen
     );
   };
