@@ -20,7 +20,7 @@
     "build": "pnpm lint && tsup src/index.ts --format cjs,esm --dts",
     "docs": "typedoc --out dist/docs --entryPoints src/**/*.ts --exclude '**/node_modules/**'",
     "lint": "eslint -f unix \"src/**/*.{ts,tsx}\" && tsc",
-    "update": "pnpm changeset version && pnpm changeset",
+    "update": "pnpm lint && pnpm changeset version && pnpm changeset",
     "publish": "pnpm run build && changeset publish"
   },
   "dependencies": {
