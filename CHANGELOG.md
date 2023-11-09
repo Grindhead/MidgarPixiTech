@@ -1,5 +1,11 @@
 # primaris
 
+## 1.0.9
+
+### Patch Changes
+
+- fe63dfd: refactored how the back button is created
+
 ## 1.0.8
 
 ### Patch Changes
