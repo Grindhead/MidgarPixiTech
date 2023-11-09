@@ -17,7 +17,7 @@ const spriteList: GameSprite[] = [];
  * @param sprite - the sprite to move towards the mouse
  * @returns void
  */
-export const addMoveSpriteTowardsMouse = (sprite) => {
+export const addMoveSpriteTowardsMouse = (sprite: GameSprite) => {
   spriteList.push(sprite);
   sprite.velocity = new Point();
 };
