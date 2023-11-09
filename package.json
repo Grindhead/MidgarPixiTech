@@ -1,6 +1,6 @@
 {
   "name": "midgar-pixi-tech",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "license": "MIT",
   "description": "Utility methods for Typescript and Pixi.js",
   "type": "module",

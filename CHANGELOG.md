@@ -1,5 +1,11 @@
 # primaris
 
+## 1.0.4
+
+### Patch Changes
+
+- 708a18f: updating changeset
+
 ## 1.0.2
 
 ### Patch Changes
