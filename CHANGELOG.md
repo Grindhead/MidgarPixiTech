@@ -1,5 +1,11 @@
 # primaris
 
+## 2.0.0
+
+### Major Changes
+
+- 493786b: improved build output to seperate files
+
 ## 1.0.7
 
 ### Patch Changes
