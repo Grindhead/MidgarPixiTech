@@ -1,5 +1,11 @@
 # primaris
 
+## 1.0.5
+
+### Patch Changes
+
+- 2594923: test deployment
+
 ## 1.0.4
 
 ### Patch Changes
