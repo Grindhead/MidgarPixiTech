@@ -1,5 +1,11 @@
 # primaris
 
+## 2.0.1
+
+### Patch Changes
+
+- acd2f96: Generating new output as we need a version bump
+
 ## 2.0.0
 
 ### Major Changes
