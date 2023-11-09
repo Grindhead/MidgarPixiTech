@@ -1,5 +1,11 @@
 # primaris
 
+## 1.0.2
+
+### Patch Changes
+
+- 1505fd1: npm release
+
 ## 1.0.1
 
 ### Patch Changes
