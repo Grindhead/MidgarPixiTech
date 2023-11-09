@@ -1,5 +1,11 @@
 # MidgarPixiTech
 
+## 2.0.5
+
+### Patch Changes
+
+- b0ceaec: version update
+
 ## 2.0.4
 
 ### Patch Changes
