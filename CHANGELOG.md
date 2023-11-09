@@ -1,5 +1,11 @@
 # MidgarPixiTech
 
+## 2.0.8
+
+### Patch Changes
+
+- 6141d35: test deployment
+
 ## 2.0.7
 
 ### Patch Changes
