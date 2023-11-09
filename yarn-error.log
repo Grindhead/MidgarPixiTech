@@ -1,0 +1,62 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Users\craig\AppData\Local\node\corepack\yarn\1.22.19\bin\yarn.js install
+
+PATH: 
+  C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files\ImageMagick-7.1.1-Q16-HDRI;C:\Python311\Scripts\;C:\Python311\;C:\Program Files (x86)\Razer Chroma SDK\bin;C:\Program Files\Razer Chroma SDK\bin;C:\Program Files (x86)\Razer\ChromaBroadcast\bin;C:\Program Files\Razer\ChromaBroadcast\bin;C:\Python310\Scripts\;C:\Python310\;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\Program Files\Broadcom\Broadcom 802.11 Network Adapter;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\ProgramData\chocolatey\bin;C:\Program Files\Git\cmd;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Windows\system32\config\systemprofile\AppData\Local\Microsoft\WindowsApps;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\dotnet\;C:\Users\craig\AppData\Roaming\nvm;C:\Program Files\nodejs;C:\Program Files\Docker\Docker\resources\bin;C:\Users\craig\AppData\Local\Microsoft\WindowsApps;C:\Users\craig\AppData\Local\Programs\Microsoft VS Code\bin;C:\Program Files\CodeAndWeb\TexturePacker\bin;C:\Program Files\ffmpeg\bin;C:\Program Files\JetBrains\WebStorm 2022.2.3\bin;;C:\Users\craig\AppData\Roaming\npm;E:\jdk-20.0.1\bin;C:\Program Files\ImageMagick-7.1.1-Q16-HDRI;C:\Users\craig\.dotnet\tools;C:\Users\craig\AppData\Roaming\nvm;C:\Program Files\nodejs;C:\Program Files\pngquant;
+
+Yarn version: 
+  1.22.19
+
+Node version: 
+  18.15.0
+
+Platform: 
+  win32 x64
+
+Trace: 
+  Error: getaddrinfo ENOTFOUND registry.yarnpkg.com
+      at GetAddrInfoReqWrap.onlookup [as oncomplete] (node:dns:107:26)
+
+npm manifest: 
+  {
+    "name": "primaris",
+    "version": "1.0.0",
+    "description": "Utility methods for Typescript",
+    "type": "module",
+    "scripts": {
+      "build": "yarn lint && yarn docs && webpack --mode production --config webpack.config.mjs",
+      "docs": "typedoc --options typedoc.json",
+      "lint": "eslint -f unix \"src/**/*.{ts,tsx}\""
+    },
+    "dependencies": {},
+    "repository": {
+      "type": "git"
+    },
+    "author": "craigbeswetherick@gmail.com",
+    "devDependencies": {
+      "eslint": "^8.51.0",
+      "@typescript-eslint/eslint-plugin": "^6.8.0",
+      "@typescript-eslint/parser": "^6.8.0",
+      "@types/node": "20.8.7",
+      "clean-webpack-plugin": "4.0.0",
+      "copy-webpack-plugin": "^11.0.0",
+      "css-loader": "6.8.1",
+      "eslint-plugin-tsdoc": "^0.2.17",
+      "file-loader": "^6.2.0",
+      "style-loader": "3.3.3",
+      "ts-loader": "^9.5.0",
+      "tslint": "^6.1.3",
+      "typedoc": "^0.25.2",
+      "typescript": "^5.2.2",
+      "url-loader": "4.1.1",
+      "webpack": "^5.89.0",
+      "webpack-cli": "^5.1.4",
+      "webpack-glsl-loader": "1.0.1"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
