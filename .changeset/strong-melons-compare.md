@@ -2,4 +2,4 @@
 'midgar-pixi-tech': patch
 ---
 
-test release
+fixed an error with eslintrc

@@ -1,5 +1,11 @@
 # MidgarPixiTech
 
+## 2.0.8
+
+### Patch Changes
+
+- ef9b105: test release
+
 ## 2.0.7
 
 ### Patch Changes
