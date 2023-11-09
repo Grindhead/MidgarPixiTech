@@ -1,5 +1,12 @@
 # MidgarPixiTech
 
+## 2.0.9
+
+### Patch Changes
+
+- d591512: test deployment
+- f347c4f: fixed an error with eslintrc
+
 ## 2.0.8
 
 ### Patch Changes
