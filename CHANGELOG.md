@@ -1,5 +1,11 @@
 # primaris
 
+## 2.0.2
+
+### Patch Changes
+
+- 8478918: refactored setup
+
 ## 2.0.1
 
 ### Patch Changes
