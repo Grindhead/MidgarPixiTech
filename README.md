@@ -24,7 +24,7 @@ _Unlock the Power of Mako and Pixi in Your TypeScript Projects_
 - Generates a production build to the `dist` directory.
 
 - **pnpm run update:**
-- Updates the project using semver and creates an MD file to document changes.
+- Updates the project using semver and creates an MD file to document changes. Do this before pushing to git.
 
 - **pnpm docs:**
 - Generates documentation at `dist/docs`.
