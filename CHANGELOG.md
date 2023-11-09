@@ -1,5 +1,11 @@
 # primaris
 
+## 2.0.4
+
+### Patch Changes
+
+- 69d38ae: removed setup() within a Scene
+
 ## 2.0.3
 
 ### Patch Changes
