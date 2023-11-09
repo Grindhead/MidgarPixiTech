@@ -54,7 +54,7 @@ export abstract class AbstractGameScene implements GameScene {
    * @param sceneContainer - the {@link Container} the scene uses
    * @returns void
    */
-  init = (
+  public init = (
     app: Application,
     sceneSwitcher: (sceneName: string) => void,
     sceneContainer: Container
