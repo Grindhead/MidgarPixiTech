@@ -1,5 +1,11 @@
 # primaris
 
+## 1.0.8
+
+### Patch Changes
+
+- 5b13b73: revert build change
+
 ## 2.0.0
 
 ### Major Changes
