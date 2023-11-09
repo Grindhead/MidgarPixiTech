@@ -1,5 +1,11 @@
 # MidgarPixiTech
 
+## 2.0.6
+
+### Patch Changes
+
+- e18e72a: updated changeset
+
 ## 2.0.5
 
 ### Patch Changes
