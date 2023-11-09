@@ -18,6 +18,14 @@ _Unlock the Power of Mako and Pixi in Your TypeScript Projects_
 
 `pnpm install`
 
+## Usage:
+
+- **pnpm**
+- pnpm install midgar-pixi-tech
+
+- **npm**
+- npm install midgar-pixi-tech
+
 ## Project Commands
 
 - **pnpm build:**
