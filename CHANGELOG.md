@@ -1,5 +1,11 @@
 # primaris
 
+## 1.0.7
+
+### Patch Changes
+
+- 318a6cd: added engine class
+
 ## 1.0.6
 
 ### Patch Changes
