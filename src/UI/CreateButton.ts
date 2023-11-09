@@ -1,4 +1,4 @@
-import { Container, Graphics, Sprite, Text, TextStyle } from 'pixi.js';
+import { Graphics, Sprite, Text, TextStyle } from 'pixi.js';
 
 /**
  * creates a new button
@@ -31,27 +31,4 @@ export const createButton = (text: string): Sprite => {
   button.eventMode = 'dynamic';
   button.cursor = 'pointer';
   return button;
-};
-
-/**
- * Create and return a back button leading to the main menu
- * @param sceneSwitcher - a callback method
- * @param parent - a {@link Container} to hold the button
- * @param sceneName - the nane of the scene to return to
- * @returns a {@link Sprite} new back button
- */
-export const createBackButton = (
-  sceneSwitcher,
-  parent: Container,
-  sceneName: string
-): Sprite => {
-  const button: Sprite = createButton('back');
-  button.x = 100;
-  button.y = 60;
-
-  button.addListener('pointerup', () => {
-    sceneSwitcher(sceneName);
-  });
-
-  return parent.addChild(button);
 };

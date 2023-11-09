@@ -1,6 +1,6 @@
 import { Application, Container, Sprite } from 'pixi.js';
 import { SceneTransition } from './Transition';
-import { createBackButton, createButton } from '../UI/CreateButton';
+import { createButton } from '../UI/CreateButton';
 
 /**
  * Scene state enum, representing its lifecycle.
@@ -29,7 +29,7 @@ export abstract class AbstractGameScene implements GameScene {
   private fadeInSceneTransition: SceneTransition | null = null;
   private fadeOutSceneTransition: SceneTransition | null = null;
   protected sceneContainer: Container | null = null;
-  protected backButton: Sprite | null = null;
+  protected backButton?: Sprite;
 
   /**
    * fade in the scene
@@ -70,20 +70,20 @@ export abstract class AbstractGameScene implements GameScene {
   abstract updateDisplay(): void;
 
   /**
-   * Setup the scene for usage.
-   * @param previousScreen - the name of the screen the back button should return to
+   * Create and return a back button
+   * @param sceneName - the name of the scene to return to
    * @returns void
    */
-  public setup = (previousScreen?: string): void => {
-    if (!previousScreen || !this.sceneContainer) {
-      return;
-    }
+  public createBackButton = (sceneName: string): void => {
+    const button: Sprite = createButton('back');
+    button.x = 100;
+    button.y = 60;
 
-    this.backButton = createBackButton(
-      this.sceneSwitcher,
-      this.sceneContainer,
-      previousScreen
-    );
+    button.addListener('pointerup', () => {
+      this.sceneSwitcher!(sceneName);
+    });
+
+    this.sceneContainer?.addChild(button);
   };
 
   /**
@@ -99,7 +99,7 @@ export abstract class AbstractGameScene implements GameScene {
    */
   public close = (): void => {
     this.backButton?.destroy();
-    this.backButton = null;
+    this.backButton = undefined;
   };
 
   /**
