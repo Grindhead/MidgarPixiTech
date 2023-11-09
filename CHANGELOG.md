@@ -1,5 +1,11 @@
 # primaris
 
+## 2.0.0
+
+### Major Changes
+
+- 43f6e0c: Version 2 release
+
 ## 1.0.9
 
 ### Patch Changes
