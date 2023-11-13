@@ -1,4 +1,4 @@
-name: Publish
+name: ci
 on:
   push:
     branches:
@@ -42,4 +42,4 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
         with:
-          publish: pnpm run publish
+          publish: pnpm run ci

@@ -97,10 +97,10 @@ export abstract class AbstractGameScene implements GameScene {
    * Core scene tear down.
    @returns void
    */
-  public close = (): void => {
+  public close(): void {
     this.backButton?.destroy();
     this.backButton = undefined;
-  };
+  }
 
   /**
    * Scene lifecycle update loop.
