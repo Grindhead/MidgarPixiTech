@@ -1,5 +1,11 @@
 # MidgarPixiTech
 
+## 2.0.16
+
+### Patch Changes
+
+- ee5938b: Scene.init is now a class member
+
 ## 2.0.15
 
 ### Patch Changes
