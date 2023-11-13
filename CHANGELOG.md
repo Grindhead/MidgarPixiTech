@@ -1,5 +1,17 @@
 # MidgarPixiTech
 
+## 2.0.13
+
+### Patch Changes
+
+- 4de1d95: removed main github action
+
+## 2.0.12
+
+### Patch Changes
+
+- 1dfc33a: updated packages and changed deploy task to be called ci
+
 ## 2.0.11
 
 ### Patch Changes
