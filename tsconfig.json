@@ -30,5 +30,12 @@
     "noEmit": true
   },
   "include": ["./.eslintrc.cjs", "src/**/*.ts"],
-  "exclude": ["node_modules", "dist", "*.md", "src/Resources"]
+  "exclude": [
+    "node_modules",
+    "dist",
+    "*.md",
+    "src/Resources",
+    ".github",
+    ".changeset"
+  ]
 }

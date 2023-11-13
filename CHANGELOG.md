@@ -1,5 +1,11 @@
 # MidgarPixiTech
 
+## 2.0.11
+
+### Patch Changes
+
+- 6e542ca: new release
+
 ## 2.0.9
 
 ### Patch Changes
