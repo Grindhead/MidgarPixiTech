@@ -1,5 +1,11 @@
 # MidgarPixiTech
 
+## 2.0.13
+
+### Patch Changes
+
+- 4de1d95: removed main github action
+
 ## 2.0.12
 
 ### Patch Changes

@@ -2,4 +2,4 @@
 'midgar-pixi-tech': patch
 ---
 
-removed main github action
+updated documentation
