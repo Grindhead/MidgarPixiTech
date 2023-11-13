@@ -1,5 +1,11 @@
 # MidgarPixiTech
 
+## 2.0.15
+
+### Patch Changes
+
+- 0e6915f: updated documentation
+
 ## 2.0.14
 
 ### Patch Changes
