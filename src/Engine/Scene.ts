@@ -54,15 +54,15 @@ export abstract class AbstractGameScene implements GameScene {
    * @param sceneContainer - the {@link Container} the scene uses
    * @returns void
    */
-  public init = (
+  public init(
     app: Application,
     sceneSwitcher: (sceneName: string) => void,
     sceneContainer: Container
-  ): void => {
+  ): void {
     this.app = app;
     this.sceneSwitcher = sceneSwitcher;
     this.sceneContainer = sceneContainer;
-  };
+  }
 
   /**
    * Update the current screen if the canvas size changes
