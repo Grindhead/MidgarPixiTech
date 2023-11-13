@@ -43,7 +43,7 @@ Create a pull request against the main branch.
 
 ### Step 3: Automated Deployment
 
-Once the PR is approved, GitHub will automatically deploy to NPM.
+Once the PR is approved, GitHub will create a new release PR. Once the release PR is approved, GitHub will automatically deploy to NPM.
 
 ## Available Commands
 
