@@ -1,5 +1,11 @@
 # MidgarPixiTech
 
+## 2.0.17
+
+### Patch Changes
+
+- 0af519f: updated tsconfig
+
 ## 2.0.16
 
 ### Patch Changes
