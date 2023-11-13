@@ -2,4 +2,4 @@
 'midgar-pixi-tech': patch
 ---
 
-updated documentation
+Scene.init is now a class member
