@@ -1,5 +1,11 @@
 # MidgarPixiTech
 
+## 2.0.18
+
+### Patch Changes
+
+- bc89903: updated output target to ES2022
+
 ## 2.0.17
 
 ### Patch Changes
