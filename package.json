@@ -13,8 +13,8 @@
     "name": "Craig Beswetherick",
     "email": "craigbeswetherick@gmail.com"
   },
-  "main": "dist/index.js",
-  "module": "dist/index.mjs",
+  "main": "dist/index.cjs",
+  "module": "dist/index.cjs",
   "types": "dist/index.d.ts",
   "scripts": {
     "build": "pnpm lint && tsup src/index.ts --format cjs,esm --dts",
@@ -23,7 +23,7 @@
     "update": "pnpm lint && pnpm changeset version && pnpm changeset",
     "ci": "pnpm run build && changeset publish"
   },
-  "dependencies": {
+  "peerDependencies": {
     "pixi.js": "^7.3.2"
   },
   "devDependencies": {
