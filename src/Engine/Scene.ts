@@ -13,16 +13,9 @@ export enum SceneState {
 }
 
 /**
- * Base interface for all game scenes.
- */
-export interface GameScene {
-  sceneUpdate(delta: number): void;
-}
-
-/**
  * Base implementation of a scene. Provides lifecycle update logic.
  */
-export abstract class AbstractGameScene implements GameScene {
+export abstract class AbstractGameScene {
   protected sceneState: SceneState | null = null;
   protected app: Application | null = null;
   protected sceneSwitcher: ((sceneName: string) => void) | null = null;
