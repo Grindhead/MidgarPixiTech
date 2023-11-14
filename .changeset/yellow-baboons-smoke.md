@@ -2,4 +2,4 @@
 'midgar-pixi-tech': patch
 ---
 
-triggering changeset
+added drawTrail functionality
