@@ -1,5 +1,11 @@
 # MidgarPixiTech
 
+## 2.0.19
+
+### Patch Changes
+
+- 25805ce: triggering changeset
+
 ## 2.0.18
 
 ### Patch Changes
