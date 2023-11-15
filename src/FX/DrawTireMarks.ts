@@ -1,17 +1,10 @@
 import { Graphics, Sprite } from 'pixi.js';
-
-type TireMark = {
-  x: number;
-  y: number;
-  rotation: number;
-  width: number;
-  alpha: number;
-};
+import { FXData } from './FXData';
 
 /**
  * an array of the tire marks drawn each frame
  */
-export const tireMarkList: TireMark[] = [];
+export const tireMarkList: FXData[] = [];
 
 /**
  * Draw a tire mark behind a sprite.
@@ -44,7 +37,7 @@ export const drawTireMark = (graphics: Graphics, sprite: Sprite): void => {
 
   graphics.endFill();
 
-  const data: TireMark = {
+  const data: FXData = {
     x: sprite.x,
     y: sprite.y,
     rotation: sprite.rotation,
