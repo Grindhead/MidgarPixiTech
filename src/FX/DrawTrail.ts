@@ -53,7 +53,7 @@ export const updateTrailFade = (
 ): void => {
   graphics.beginFill(color, initialAlpha);
   trailList = trailList.filter((mark) => {
-    drawTrail(graphics, mark, initialAlpha);
+    drawTrail(graphics, mark, mark.alpha);
     mark.alpha -= fadeSpeed * delta;
     return mark.alpha > 0;
   });
