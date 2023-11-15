@@ -1,5 +1,11 @@
 # MidgarPixiTech
 
+## 2.0.29
+
+### Patch Changes
+
+- edac1ff: updated FX methods to be more modular and fixed bugs
+
 ## 2.0.28
 
 ### Patch Changes
