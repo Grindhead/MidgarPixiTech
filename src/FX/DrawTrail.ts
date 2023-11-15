@@ -12,16 +12,17 @@ export let trailList: FXData[] = [];
  * @param graphics - The PIXI Graphics object to draw the tire mark on.
  * @param sprite - The {@link FXData} to target.
  * @param initialAlpha - the initial alpha of the trail
+ * @param width - the width of the FX
  * @returns void
  */
 export const drawTrail = (
   graphics: Graphics,
   sprite: FXData,
-  initialAlpha: number,
-  color: number
+  alpha: number,
+  color: number,
+  width: number
 ): void => {
-  const circleRadius = sprite.width / 2;
-
+  const circleRadius = width;
   const position1X = sprite.x - Math.cos(sprite.rotation + Math.PI / 2);
   const position1Y = sprite.y - Math.sin(sprite.rotation + Math.PI / 2);
 
@@ -29,8 +30,8 @@ export const drawTrail = (
     x: sprite.x,
     y: sprite.y,
     rotation: sprite.rotation,
-    width: sprite.width,
-    alpha: initialAlpha
+    width,
+    alpha
   };
 
   graphics.beginFill(color, data.alpha);
@@ -45,16 +46,18 @@ export const drawTrail = (
  * @param tireMarkFadeSpeed - The speed at which tire marks fade.
  * @param delta - The time delta.
  * @param color - the color to draw
+ * @param width - the width of the FX
  * @returns void
  */
 export const updateTrailFade = (
   graphics: Graphics,
   fadeSpeed: number,
   delta: number,
-  color: number
+  color: number,
+  width: number
 ): void => {
   trailList = trailList.filter((mark) => {
-    drawTrail(graphics, mark, mark.alpha, color);
+    drawTrail(graphics, mark, mark.alpha, color, width);
     mark.alpha -= fadeSpeed * delta;
     return mark.alpha > 0;
   });
