@@ -7,7 +7,6 @@ export * from './Entities/GameSprite';
 
 export * from './FX/DrawTireMarks';
 export * from './FX/DrawTrail';
-export * from './FX/UpdateFade';
 export * from './FX/FXData';
 
 export * from './Input/ControlSpriteWithKeyboard';
