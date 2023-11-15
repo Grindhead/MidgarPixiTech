@@ -1,26 +1,19 @@
-import { Graphics, Sprite } from 'pixi.js';
-
-type Trail = {
-  x: number;
-  y: number;
-  rotation: number;
-  width: number;
-  alpha: number;
-};
+import { Graphics } from 'pixi.js';
+import { FXData } from './FXData';
 
 /**
  * an array of the tire marks drawn each frame
  */
-export const trailList: Trail[] = [];
+export const trailList: FXData[] = [];
 
 /**
  * Draw a tire mark behind a sprite.
  *
  * @param graphics - The PIXI Graphics object to draw the tire mark on.
- * @param sprite - The Sprite to target.
+ * @param sprite - The {@link FXData} to target.
  * @returns void
  */
-export const drawTrail = (graphics: Graphics, sprite: Sprite): void => {
+export const drawTrail = (graphics: Graphics, sprite: FXData): void => {
   const tireMarkColor = 0x473131;
   const circleRadius = sprite.width * 0.05;
 
@@ -35,7 +28,7 @@ export const drawTrail = (graphics: Graphics, sprite: Sprite): void => {
 
   graphics.endFill();
 
-  const data: Trail = {
+  const data: FXData = {
     x: sprite.x,
     y: sprite.y,
     rotation: sprite.rotation,

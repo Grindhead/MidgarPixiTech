@@ -1,5 +1,6 @@
-import { Graphics, Sprite } from 'pixi.js';
+import { Graphics } from 'pixi.js';
 import { drawTrail } from './DrawTrail';
+import { FXData } from './FXData';
 
 /**
  * Update and fade {@link Graphics} object.
@@ -13,13 +14,13 @@ export const updateFade = (
   graphics: Graphics,
   fadeSpeed: number,
   delta: number,
-  arr: Sprite[]
-): Sprite[] => {
+  arr: FXData[]
+): FXData[] => {
   graphics.clear();
   graphics.lineStyle(1);
 
-  arr = arr.filter((trail: Sprite) => {
-    drawTrail(graphics, trail as Sprite);
+  arr = arr.filter((trail: FXData) => {
+    drawTrail(graphics, trail);
     trail.alpha -= fadeSpeed * delta;
     return trail.alpha > 0;
   });
