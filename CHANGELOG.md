@@ -1,5 +1,11 @@
 # MidgarPixiTech
 
+## 2.0.20
+
+### Patch Changes
+
+- f9d405c: release
+
 ## 2.0.19
 
 ### Patch Changes
