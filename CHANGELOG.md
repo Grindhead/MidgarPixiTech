@@ -1,5 +1,11 @@
 # MidgarPixiTech
 
+## 2.0.27
+
+### Patch Changes
+
+- 5ef7091: fixed an issue with the alpha of graphics being incorrect
+
 ## 2.0.26
 
 ### Patch Changes
