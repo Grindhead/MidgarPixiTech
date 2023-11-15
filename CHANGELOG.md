@@ -1,5 +1,11 @@
 # MidgarPixiTech
 
+## 2.0.22
+
+### Patch Changes
+
+- 3be0ecf: bug fixes
+
 ## 2.0.21
 
 ### Patch Changes
