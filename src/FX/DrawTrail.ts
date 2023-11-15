@@ -1,6 +1,6 @@
 import { Graphics, Sprite } from 'pixi.js';
 
-type TireMark = {
+type Trail = {
   x: number;
   y: number;
   rotation: number;
@@ -11,7 +11,7 @@ type TireMark = {
 /**
  * an array of the tire marks drawn each frame
  */
-let tireMarkList: TireMark[] = [];
+let trailList: Trail[] = [];
 
 /**
  * Draw a tire mark behind a sprite.
@@ -20,31 +20,22 @@ let tireMarkList: TireMark[] = [];
  * @param sprite - The Sprite to target.
  * @returns void
  */
-export const drawTireMark = (graphics: Graphics, sprite: Sprite): void => {
+export const drawTrail = (graphics: Graphics, sprite: Sprite): void => {
   const tireMarkColor = 0x473131;
-  const offset = sprite.width * 0.2;
   const circleRadius = sprite.width * 0.05;
 
-  const position1X =
-    sprite.x - Math.cos(sprite.rotation + Math.PI / 2) * offset;
-  const position1Y =
-    sprite.y - Math.sin(sprite.rotation + Math.PI / 2) * offset;
-
-  const position2X =
-    sprite.x - Math.cos(sprite.rotation - Math.PI / 2) * offset;
-  const position2Y =
-    sprite.y - Math.sin(sprite.rotation - Math.PI / 2) * offset;
+  const position1X = sprite.x - Math.cos(sprite.rotation + Math.PI / 2);
+  const position1Y = sprite.y - Math.sin(sprite.rotation + Math.PI / 2);
 
   graphics.lineStyle(0); // No outline
   graphics.beginFill(tireMarkColor, sprite.alpha);
 
   // Draw circles at the specified positions
   graphics.drawCircle(position1X, position1Y, circleRadius);
-  graphics.drawCircle(position2X, position2Y, circleRadius);
 
   graphics.endFill();
 
-  const data: TireMark = {
+  const data: Trail = {
     x: sprite.x,
     y: sprite.y,
     rotation: sprite.rotation,
@@ -52,7 +43,7 @@ export const drawTireMark = (graphics: Graphics, sprite: Sprite): void => {
     alpha: 0.8
   };
 
-  tireMarkList.push(data);
+  trailList.push(data);
 };
 
 /**
@@ -71,9 +62,9 @@ export const updateFade = (
   graphics.clear();
   graphics.lineStyle(1);
 
-  tireMarkList = tireMarkList.filter((mark) => {
-    drawTireMark(graphics, mark as Sprite);
-    mark.alpha -= fadeSpeed * delta;
-    return mark.alpha > 0;
+  trailList = trailList.filter((trail) => {
+    drawTrail(graphics, trail as Sprite);
+    trail.alpha -= fadeSpeed * delta;
+    return trail.alpha > 0;
   });
 };
