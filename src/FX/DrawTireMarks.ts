@@ -1,4 +1,4 @@
-import { Graphics, Sprite } from 'pixi.js';
+import { Graphics } from 'pixi.js';
 import { FXData } from './FXData';
 
 /**
@@ -13,7 +13,7 @@ export const tireMarkList: FXData[] = [];
  * @param sprite - The Sprite to target.
  * @returns void
  */
-export const drawTireMark = (graphics: Graphics, sprite: Sprite): void => {
+export const drawTireMark = (graphics: Graphics, sprite: FXData): void => {
   const tireMarkColor = 0x473131;
   const offset = sprite.width * 0.2;
   const circleRadius = sprite.width * 0.05;
