@@ -4,7 +4,7 @@ import { FXData } from './FXData';
 /**
  * an array of the tire marks drawn each frame
  */
-export const tireMarkList: FXData[] = [];
+export let tireMarkList: FXData[] = [];
 
 /**
  * Draw a tire mark behind a sprite.
@@ -34,7 +34,7 @@ export const drawTireMark = (graphics: Graphics, sprite: FXData): void => {
   // Draw circles at the specified positions
   graphics.drawCircle(position1X, position1Y, circleRadius);
   graphics.drawCircle(position2X, position2Y, circleRadius);
-
+  console.log(offset);
   graphics.endFill();
 
   const data: FXData = {
@@ -46,4 +46,27 @@ export const drawTireMark = (graphics: Graphics, sprite: FXData): void => {
   };
 
   tireMarkList.push(data);
+};
+
+/**
+ * Update and fade {@link Graphics} object.
+ *
+ * @param graphics - The PIXI Graphics object with tire marks.
+ * @param tireMarkFadeSpeed - The speed at which tire marks fade.
+ * @param delta - The time delta.
+ * @returns void
+ */
+export const updateTireFade = (
+  graphics: Graphics,
+  fadeSpeed: number,
+  delta: number
+): void => {
+  graphics.clear();
+  graphics.lineStyle(1);
+
+  tireMarkList = tireMarkList.filter((mark) => {
+    drawTireMark(graphics, mark);
+    mark.alpha -= fadeSpeed * delta;
+    return mark.alpha > 0;
+  });
 };
