@@ -5,12 +5,12 @@ import { checkCircularCollisionWithRectangle } from '../Math/Math';
 /**
  * the life of the bullet
  */
-const BULLET_LIFE: number = 100;
+export const BULLET_LIFE: number = 100;
 
 /**
  * the speed of the bullet in pixels
  */
-const BULLET_SPEED: number = 10;
+export const BULLET_SPEED: number = 10;
 
 /**
  * the time it takes to reload
@@ -25,7 +25,7 @@ export let reloadTime: number = 0;
 /**
  * an array of all the bullets
  */
-let BULLET_LIST: GameSprite[] = [];
+export let bulletList: GameSprite[] = [];
 
 /**
  * create a moving bullet at an x and y location with a angle to set a velocity
@@ -56,7 +56,7 @@ export const createBullet = (
   bullet.damage = damage;
   bullet.life = BULLET_LIFE;
   sceneContainer.addChildAt(bullet, 0);
-  BULLET_LIST.push(bullet);
+  bulletList.push(bullet);
 
   if (reload) reloadTime = RELOAD_COOLDOWN;
 
@@ -76,7 +76,7 @@ export const updateBullets = (
 ): GameSprite[] => {
   reloadTime -= delta;
 
-  BULLET_LIST = BULLET_LIST.filter((bullet: GameSprite) => {
+  bulletList = bulletList.filter((bullet: GameSprite) => {
     bullet.x += bullet.velocity.x * delta;
     bullet.y += bullet.velocity.y * delta;
     bullet.life! -= delta;
