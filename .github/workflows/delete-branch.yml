@@ -15,8 +15,11 @@ jobs:
 
       - name: Delete branch
         run: |
-          # Extract branch name from the pull request information
-          branch_name=${GITHUB_HEAD_REF}
+          # Extract branch name from the ref
+          branch_name=${GITHUB_REF#refs/heads/}
 
-          # Delete the branch
-          git push origin --delete $branch_name
+          # Check if it's not the default branch
+          if [ "$branch_name" != "main" ]; then
+            # Delete the branch
+            git push origin --delete $branch_name
+          fi
