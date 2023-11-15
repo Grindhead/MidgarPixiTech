@@ -1,5 +1,11 @@
 # MidgarPixiTech
 
+## 2.0.25
+
+### Patch Changes
+
+- aae07cd: bug fix
+
 ## 2.0.24
 
 ### Patch Changes
