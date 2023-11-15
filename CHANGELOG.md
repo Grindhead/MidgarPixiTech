@@ -1,5 +1,11 @@
 # MidgarPixiTech
 
+## 2.0.24
+
+### Patch Changes
+
+- 7365e5c: FXData added
+
 ## 2.0.23
 
 ### Patch Changes
