@@ -1,5 +1,11 @@
 # MidgarPixiTech
 
+## 2.0.23
+
+### Patch Changes
+
+- f9f7766: updated exports
+
 ## 2.0.22
 
 ### Patch Changes
