@@ -1,5 +1,11 @@
 # MidgarPixiTech
 
+## 2.0.33
+
+### Patch Changes
+
+- 3555470: bug fxes
+
 ## 2.0.32
 
 ### Patch Changes
