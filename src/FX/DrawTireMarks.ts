@@ -65,7 +65,7 @@ export const updateTireFade = (
 ): void => {
   graphics.beginFill(color, initialAlpha);
   tireMarkList = tireMarkList.filter((mark) => {
-    drawTireMark(graphics, mark, initialAlpha);
+    drawTireMark(graphics, mark, mark.alpha);
     mark.alpha -= fadeSpeed * delta;
     return mark.alpha > 0;
   });
