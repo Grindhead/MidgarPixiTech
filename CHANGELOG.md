@@ -1,5 +1,11 @@
 # MidgarPixiTech
 
+## 2.0.26
+
+### Patch Changes
+
+- 5c72f45: release
+
 ## 2.0.25
 
 ### Patch Changes
