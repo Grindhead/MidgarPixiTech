@@ -1,5 +1,11 @@
 # MidgarPixiTech
 
+## 2.0.21
+
+### Patch Changes
+
+- cd707a2: updated BulletController exports
+
 ## 2.0.20
 
 ### Patch Changes
