@@ -1,5 +1,11 @@
 # MidgarPixiTech
 
+## 2.0.34
+
+### Patch Changes
+
+- 6752003: automatically remove merged branches
+
 ## 2.0.33
 
 ### Patch Changes
