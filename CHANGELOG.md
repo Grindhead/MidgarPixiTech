@@ -1,5 +1,11 @@
 # MidgarPixiTech
 
+## 2.0.28
+
+### Patch Changes
+
+- d1e8737: removed graphics.clear each frame within each fade method
+
 ## 2.0.27
 
 ### Patch Changes
