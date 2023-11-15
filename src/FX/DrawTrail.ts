@@ -13,6 +13,7 @@ export let trailList: FXData[] = [];
  * @param sprite - The {@link FXData} to target.
  * @param initialAlpha - the initial alpha of the trail
  * @param width - the width of the FX
+ * @param offset - the FX offset
  * @returns void
  */
 export const drawTrail = (
@@ -20,11 +21,14 @@ export const drawTrail = (
   sprite: FXData,
   alpha: number,
   color: number,
-  width: number
+  width: number,
+  offset: number
 ): void => {
   const circleRadius = width;
-  const position1X = sprite.x - Math.cos(sprite.rotation + Math.PI / 2);
-  const position1Y = sprite.y - Math.sin(sprite.rotation + Math.PI / 2);
+  const position1X =
+    sprite.x - Math.cos(sprite.rotation + Math.PI / 2) * offset;
+  const position1Y =
+    sprite.y - Math.sin(sprite.rotation + Math.PI / 2) * offset;
 
   const data: FXData = {
     x: sprite.x,
@@ -47,6 +51,7 @@ export const drawTrail = (
  * @param delta - The time delta.
  * @param color - the color to draw
  * @param width - the width of the FX
+ * @param offset - the animation offset
  * @returns void
  */
 export const updateTrailFade = (
@@ -54,10 +59,11 @@ export const updateTrailFade = (
   fadeSpeed: number,
   delta: number,
   color: number,
-  width: number
+  width: number,
+  offset: number
 ): void => {
   trailList = trailList.filter((mark) => {
-    drawTrail(graphics, mark, mark.alpha, color, width);
+    drawTrail(graphics, mark, mark.alpha, color, width, offset);
     mark.alpha -= fadeSpeed * delta;
     return mark.alpha > 0;
   });
