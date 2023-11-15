@@ -1,4 +1,4 @@
-import { Graphics, Sprite } from 'pixi.js';
+import { Graphics } from 'pixi.js';
 import { FXData } from './FXData';
 
 /**
