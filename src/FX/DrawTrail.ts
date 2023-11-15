@@ -15,7 +15,7 @@ export let trailList: FXData[] = [];
  */
 export const drawTrail = (graphics: Graphics, sprite: FXData): void => {
   const tireMarkColor = 0x473131;
-  const circleRadius = sprite.width * 0.05;
+  const circleRadius = sprite.width / 2;
 
   const position1X = sprite.x - Math.cos(sprite.rotation + Math.PI / 2);
   const position1Y = sprite.y - Math.sin(sprite.rotation + Math.PI / 2);
@@ -49,9 +49,7 @@ export const updateTrailFade = (
   fadeSpeed: number,
   delta: number
 ): void => {
-  graphics.clear();
   graphics.lineStyle(1);
-
   trailList = trailList.filter((mark) => {
     drawTrail(graphics, mark);
     mark.alpha -= fadeSpeed * delta;
