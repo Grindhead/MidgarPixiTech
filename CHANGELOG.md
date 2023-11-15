@@ -1,5 +1,11 @@
 # MidgarPixiTech
 
+## 2.0.32
+
+### Patch Changes
+
+- 985881c: refactor
+
 ## 2.0.31
 
 ### Patch Changes
