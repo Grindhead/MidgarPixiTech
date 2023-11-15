@@ -28,15 +28,6 @@ export const drawTireMark = (graphics: Graphics, sprite: FXData): void => {
   const position2Y =
     sprite.y - Math.sin(sprite.rotation - Math.PI / 2) * offset;
 
-  graphics.lineStyle(0); // No outline
-  graphics.beginFill(tireMarkColor, sprite.alpha);
-
-  // Draw circles at the specified positions
-  graphics.drawCircle(position1X, position1Y, circleRadius);
-  graphics.drawCircle(position2X, position2Y, circleRadius);
-  console.log(offset);
-  graphics.endFill();
-
   const data: FXData = {
     x: sprite.x,
     y: sprite.y,
@@ -44,6 +35,13 @@ export const drawTireMark = (graphics: Graphics, sprite: FXData): void => {
     width: sprite.width,
     alpha: 0.8
   };
+
+  graphics.lineStyle(0);
+  graphics.beginFill(tireMarkColor, data.alpha);
+  graphics.drawCircle(position1X, position1Y, circleRadius);
+  graphics.drawCircle(position2X, position2Y, circleRadius);
+  console.log(offset);
+  graphics.endFill();
 
   tireMarkList.push(data);
 };

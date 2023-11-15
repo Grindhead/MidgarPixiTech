@@ -20,14 +20,6 @@ export const drawTrail = (graphics: Graphics, sprite: FXData): void => {
   const position1X = sprite.x - Math.cos(sprite.rotation + Math.PI / 2);
   const position1Y = sprite.y - Math.sin(sprite.rotation + Math.PI / 2);
 
-  graphics.lineStyle(0); // No outline
-  graphics.beginFill(tireMarkColor, sprite.alpha);
-
-  // Draw circles at the specified positions
-  graphics.drawCircle(position1X, position1Y, circleRadius);
-
-  graphics.endFill();
-
   const data: FXData = {
     x: sprite.x,
     y: sprite.y,
@@ -35,6 +27,11 @@ export const drawTrail = (graphics: Graphics, sprite: FXData): void => {
     width: sprite.width,
     alpha: 0.8
   };
+
+  graphics.lineStyle(0);
+  graphics.beginFill(tireMarkColor, data.alpha);
+  graphics.drawCircle(position1X, position1Y, circleRadius);
+  graphics.endFill();
 
   trailList.push(data);
 };
