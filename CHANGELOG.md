@@ -1,5 +1,11 @@
 # MidgarPixiTech
 
+## 2.0.30
+
+### Patch Changes
+
+- ddfa821: fixed an issue where fx would not fade out
+
 ## 2.0.29
 
 ### Patch Changes
