@@ -13,16 +13,19 @@ export let tireMarkList: FXData[] = [];
  * @param sprite - The Sprite to target.
  * @param initialAlpha - the initial alpha of the FX
  * @param color - the color to draw
+ * @param width - the width of the FX
+ * @param offset - the space between the tire tracks
  * @returns void
  */
 export const drawTireMark = (
   graphics: Graphics,
   sprite: FXData,
-  initialAlpha: number,
-  color: number
+  alpha: number,
+  color: number,
+  width: number,
+  offset: number
 ): void => {
-  const offset = sprite.width * 0.2;
-  const circleRadius = sprite.width * 0.05;
+  const circleRadius = width;
 
   const position1X =
     sprite.x - Math.cos(sprite.rotation + Math.PI / 2) * offset;
@@ -38,8 +41,8 @@ export const drawTireMark = (
     x: sprite.x,
     y: sprite.y,
     rotation: sprite.rotation,
-    width: sprite.width,
-    alpha: initialAlpha
+    width,
+    alpha
   };
 
   graphics.beginFill(color, data.alpha);
@@ -56,16 +59,20 @@ export const drawTireMark = (
  * @param tireMarkFadeSpeed - The speed at which tire marks fade.
  * @param delta - The time delta.
  * @param color - the color to draw
+ * @param width - the width of the FX
+ * @param offset - the space between the tire tracks
  * @returns void
  */
 export const updateTireFade = (
   graphics: Graphics,
   fadeSpeed: number,
   delta: number,
-  color: number
+  color: number,
+  width: number,
+  offset: number
 ): void => {
   tireMarkList = tireMarkList.filter((mark) => {
-    drawTireMark(graphics, mark, mark.alpha, color);
+    drawTireMark(graphics, mark, mark.alpha, color, width, offset);
     mark.alpha -= fadeSpeed * delta;
     return mark.alpha > 0;
   });
