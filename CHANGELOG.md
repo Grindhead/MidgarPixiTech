@@ -1,5 +1,11 @@
 # MidgarPixiTech
 
+## 2.0.35
+
+### Patch Changes
+
+- 58414e2: bug fix for branch deletion
+
 ## 2.0.34
 
 ### Patch Changes
