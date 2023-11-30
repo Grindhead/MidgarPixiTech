@@ -4,6 +4,8 @@ export * from './Engine/Transition';
 
 export * from './Entities/BulletController';
 export * from './Entities/GameSprite';
+export * from './Entities/GameSprite';
+export * from './Entities/DestroySprites';
 
 export * from './FX/DrawTireMarks';
 export * from './FX/DrawTrail';
@@ -17,7 +19,6 @@ export * from './Input/RotateSpriteTowardsMouse';
 export * from './Math/GetGameScale';
 export * from './Math/Math';
 
-export * from './UI/CreateButton';
+export * from './OS/getSupportedVideoFormat';
 
-export * from './Entities/GameSprite';
-export * from './Entities/DestroySprites';
+export * from './UI/CreateButton';

@@ -1,5 +1,11 @@
 # MidgarPixiTech
 
+## 2.0.36
+
+### Patch Changes
+
+- 1a1c805: updated package.json and updated yml packages
+
 ## 2.0.35
 
 ### Patch Changes
