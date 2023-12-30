@@ -1,5 +1,5 @@
 import { Application, Container } from 'pixi.js';
-import { AbstractGameScene } from './Scene';
+import { AbstractGameScene } from './AbstractScene';
 import { SceneTransition, TransitionType } from './Transition';
 import { setScale } from '../Math/GetGameScale';
 
@@ -36,7 +36,7 @@ export interface SceneSettings {
 /**
  * Manages game scenes.
  */
-export class Engine {
+export class SceneManager {
   /**
    * the {@link SceneSettings} instance
    */

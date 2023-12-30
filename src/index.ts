@@ -1,5 +1,5 @@
 export * from './Engine/Engine';
-export * from './Engine/Scene';
+export * from './Engine/AbstractScene';
 export * from './Engine/Transition';
 
 export * from './Entities/BulletController';
@@ -19,6 +19,6 @@ export * from './Input/RotateSpriteTowardsMouse';
 export * from './Math/GetGameScale';
 export * from './Math/Math';
 
-export * from './OS/getSupportedVideoFormat';
+export * from './OS/GetSupportedVideoFormat';
 
 export * from './UI/CreateButton';
