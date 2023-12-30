@@ -1,6 +1,6 @@
-export * from './Engine/Engine';
-export * from './Engine/AbstractScene';
-export * from './Engine/Transition';
+export * from './SceneManager/Engine';
+export * from './SceneManager/AbstractScene';
+export * from './SceneManager/Transition';
 
 export * from './Entities/BulletController';
 export * from './Entities/GameSprite';
