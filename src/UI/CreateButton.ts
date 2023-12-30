@@ -6,16 +6,8 @@ import { Graphics, Sprite, Text, TextStyle } from 'pixi.js';
  * @returns a {@link Sprite}
  */
 export const createButton = (text: string): Sprite => {
-  const width = 150;
-  const height = 50;
   const button: Sprite = new Sprite();
-  const buttonBackground: Graphics = new Graphics();
-
-  buttonBackground.beginFill(0xfff, 1);
-  buttonBackground.drawRoundedRect(-width / 2, -height / 2, width, height, 50);
-  buttonBackground.endFill();
-  buttonBackground.cacheAsBitmap = true;
-
+  const buttonBackground = createButtonBackground(150, 50, 50, 0xfff, 1);
   button.addChild(buttonBackground);
 
   const style: TextStyle = new TextStyle({
@@ -31,4 +23,30 @@ export const createButton = (text: string): Sprite => {
   button.eventMode = 'dynamic';
   button.cursor = 'pointer';
   return button;
+};
+
+/**
+ *
+ * Creates and returns a sprite
+ *
+ * @param width - the width
+ * @param height - the height
+ * @param radius - the radius
+ * @param color - the color
+ * @param alpha - the alpha
+ * @returns a {@link Graphics}
+ */
+const createButtonBackground = (
+  width: number,
+  height: number,
+  radius: number,
+  color: number,
+  alpha: number
+): Graphics => {
+  const background: Graphics = new Graphics();
+  background.beginFill(color, alpha);
+  background.drawRoundedRect(-width / 2, -height / 2, width, height, radius);
+  background.endFill();
+  background.cacheAsBitmap = true;
+  return background;
 };
