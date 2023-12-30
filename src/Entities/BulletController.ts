@@ -29,6 +29,7 @@ export let bulletList: GameSprite[] = [];
 
 /**
  * create a moving bullet at an x and y location with a angle to set a velocity
+ * @param textureName - the name of the texture to use
  * @param x - the y position to create the bullet at
  * @param y - the x position to create the bullet at
  * @param angle - the angle in degrees
@@ -37,6 +38,7 @@ export let bulletList: GameSprite[] = [];
  * @returns {@link MovingSprite}
  */
 export const createBullet = (
+  textureName: string,
   x: number,
   y: number,
   angle: number,
@@ -45,7 +47,7 @@ export const createBullet = (
   damage: number
 ): GameSprite | undefined => {
   if (reloadTime > 0) return;
-  const bullet = new GameSprite(Texture.from('bullet.png'));
+  const bullet = new GameSprite(Texture.from(textureName));
   bullet.x = x;
   bullet.y = y;
   bullet.anchor.set(0.5);
