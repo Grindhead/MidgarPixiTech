@@ -1,5 +1,11 @@
 # MidgarPixiTech
 
+## 2.0.38
+
+### Patch Changes
+
+- 0898ce3: set module to .js from cjs in package.json
+
 ## 2.0.37
 
 ### Patch Changes
