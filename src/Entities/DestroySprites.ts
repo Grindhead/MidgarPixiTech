@@ -11,5 +11,5 @@ export const destroySprites = (arr: DisplayObject[]): void => {
     dO.destroy();
   });
 
-  arr = [];
+  arr.length = 0;
 };

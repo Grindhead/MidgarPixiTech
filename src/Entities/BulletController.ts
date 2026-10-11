@@ -66,7 +66,7 @@ export const createBullet = (
 };
 
 /**
- * update the position of each bullet
+ * update each bullet; a live bullet damages only the first live target it hits
  * @param delta - the current time delta
  * @returns an array of {@link GameSprite}
  */
@@ -83,12 +83,15 @@ export const updateBullets = (
     bullet.y += bullet.velocity.y * delta;
     bullet.life! -= delta;
 
-    targetList.forEach((target) => {
-      if (checkCircularCollisionWithRectangle(bullet, target)) {
-        bullet.life = 0;
-        target.life -= 35;
+    if (bullet.life > 0) {
+      for (const target of targetList) {
+        if (target.life > 0 && checkCircularCollisionWithRectangle(bullet, target)) {
+          target.life -= bullet.damage;
+          bullet.life = 0;
+          break;
+        }
       }
-    });
+    }
 
     if (
       bullet.x <= 0 ||
@@ -123,6 +126,6 @@ export const updateBullets = (
  * @returns void
  */
 const killSprite = (sprite: GameSprite): void => {
-  sprite.parent.removeChild(sprite);
+  sprite.parent?.removeChild(sprite);
   sprite.destroy();
 };
