@@ -66,7 +66,10 @@ export const createBullet = (
 };
 
 /**
- * update the position of each bullet
+ * update the position of each bullet.
+ * A bullet that hits a target deals its own `damage` value to that target and is
+ * then spent: it hits at most one target per lifetime (the first overlapping target
+ * in `targetList` order), even if it overlaps several targets at once.
  * @param delta - the current time delta
  * @returns an array of {@link GameSprite}
  */
@@ -83,12 +86,13 @@ export const updateBullets = (
     bullet.y += bullet.velocity.y * delta;
     bullet.life! -= delta;
 
-    targetList.forEach((target) => {
+    for (const target of targetList) {
       if (checkCircularCollisionWithRectangle(bullet, target)) {
         bullet.life = 0;
-        target.life -= 35;
+        target.life -= bullet.damage;
+        break;
       }
-    });
+    }
 
     if (
       bullet.x <= 0 ||

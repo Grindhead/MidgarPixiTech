@@ -19,6 +19,6 @@ export * from './Input/RotateSpriteTowardsMouse';
 export * from './Math/GetGameScale';
 export * from './Math/Math';
 
-export * from './OS/GetSupportedVideoFormat';
+export * from './OS/getSupportedVideoFormat';
 
 export * from './UI/CreateButton';
