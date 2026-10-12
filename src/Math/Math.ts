@@ -40,7 +40,8 @@ export const calculateDistanceBetweenPoints = (
  *
  * @param point1 - The starting point.
  * @param point2 - The target point.
- * @returns The normalized direction vector.
+ * @returns The normalized direction vector. When both points are the same, there is
+ * no direction, so a zero vector `(0, 0)` is returned instead of dividing by zero.
  */
 export const calculateDirectionVector = (
   point1: Point,
@@ -49,6 +50,9 @@ export const calculateDirectionVector = (
   const dx = point2.x - point1.x;
   const dy = point2.y - point1.y;
   const distance = calculateDistanceBetweenPoints(point1, point2);
+  if (distance === 0) {
+    return new Point(0, 0);
+  }
   return new Point(dx / distance, dy / distance);
 };
 

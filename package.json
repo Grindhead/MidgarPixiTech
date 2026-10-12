@@ -19,6 +19,7 @@
   "scripts": {
     "build": "pnpm lint && tsup src/index.ts --format cjs,esm --dts",
     "docs": "typedoc --out dist/docs --entryPoints src/**/*.ts --exclude '**/node_modules/**'",
+    "test": "node --test --experimental-transform-types --import ./test/register.mjs \"test/*.test.ts\"",
     "lint": "eslint -f unix \"src/**/*.{ts,tsx}\" && tsc",
     "update": "pnpm lint && pnpm changeset version && pnpm changeset",
     "ci": "pnpm run build && changeset publish"
